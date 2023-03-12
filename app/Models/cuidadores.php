@@ -22,5 +22,8 @@ class cuidadores extends Model
         return $this->hasMany(cliente::class);
         }
 
+    public function  maquinas() {
+            return $this->hasMany(maquina::class);
+         }    
 
 }

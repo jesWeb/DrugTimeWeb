@@ -30,18 +30,21 @@ class clientes extends Model
    public function cuidadores () {
     return $this->belongsTo(cuidador::class);
    }
- //  public function estados() {
-   // return $this->belongsTo(estados::class);
-   // }
-  //public function medicamentos() {
-  // return $this->belongsTo(medicamentos::class);
-   // }
-   //public function tratamientos() {
-    //return $this->belongsTo(tratamientos::class);
-   // }
-  // public function maquinas() {
-   // return $this->belongsTo(maquinas::class);
-    //}
+   public function estados() {
+   return $this->belongsTo(estado::class);
+   }
+  
+   public function medicamentos() {
+   return $this->belongsTo(medicamento::class);
+    }
+  
+    public function tratamientos() {
+    return $this->belongsTo(tratamiento::class);
+   }
+  
+    public function maquinas() {
+    return $this->belongsTo(maquina::class);
+    }
 
   
        

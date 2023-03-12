@@ -13,6 +13,9 @@ class typeUsers extends Model
     public function  clientes() {
         return $this->hasMany(cliente::class);
         }
-
+        
+    public function  maquinas() {
+        return $this->hasMany(maquina::class);
+     }
 
 }
