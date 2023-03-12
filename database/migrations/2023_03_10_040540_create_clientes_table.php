@@ -17,7 +17,7 @@ class CreateClientesTable extends Migration
             $table->id('id_clientes');
             $table->string('Nombre');
             $table->date('FechaN');
-            $table->integer('Sexo');
+            $table->char('Sexo');
             $table->integer('Peso');
             $table->integer('Alergias');
             $table->string('Enfermedad-C');
@@ -25,8 +25,32 @@ class CreateClientesTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->integer('imagenU');
-            
             $table->timestamps();
+            //llaves fotraneas
+            $table->unsignedBigInteger('type_users_id');
+            $table->foreign('type_users_id')->references('id')->on ('type_users');
+            
+           $table->unsignedBigInteger('cuidadores_id');
+            $table->foreign('cuidadores_id')->references('id')->on ('cuidadores');  
+
+           //$table->unsignedBigInteger('estados_id');
+           // $table->foreign('estados_id')->references('id')->on ('estados');  
+
+            //$table->unsignedBigInteger('medicamentos_id');
+            //$table->foreign('medicamentos_id')->references('id')->on ('medicamentos'); 
+
+            //$table->unsignedBigInteger('tratamientos_id');
+            //$table->foreign('tratamientos_id')->references('id')->on ('tratamientos');  
+              
+            //$table->unsignedBigInteger('maquinas_id');
+            //$table->foreign('maquinas_id')->references('id')->on ('maquinas');  
+              
+            //$table->unsignedBigInteger('');
+            //$table->foreign('')->references('')->on ('');  
+              
+            
+           
+
             $table->softDeletes();
         });
     }

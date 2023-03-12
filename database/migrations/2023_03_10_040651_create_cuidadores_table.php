@@ -14,7 +14,7 @@ class CreateCuidadoresTable extends Migration
     public function up()
     {
         Schema::create('cuidadores', function (Blueprint $table) {
-            $table->id('id_cuidador');
+            $table->id();
             $table->string('Nombre');
             $table->date('FechaN');
             $table->integer('Sexo');

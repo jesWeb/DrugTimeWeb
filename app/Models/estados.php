@@ -11,4 +11,14 @@ class estados extends Model
     protected $table = 'estados';
     protected $primaryKey ='id_estados';
     protected $fillable = ['nombre']; 
+
+    
+    
+    public function  cliente() {
+        return $this->hasMany(cliente::class);
+        }
+
+
+
+
 }

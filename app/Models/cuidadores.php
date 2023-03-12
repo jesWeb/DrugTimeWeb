@@ -16,4 +16,11 @@ class cuidadores extends Model
         'Telefono',
         'email',
     ];
+    
+    //
+    public function clientes() {
+        return $this->hasMany(cliente::class);
+        }
+
+
 }
