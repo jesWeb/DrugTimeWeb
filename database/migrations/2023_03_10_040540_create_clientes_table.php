@@ -33,8 +33,8 @@ class CreateClientesTable extends Migration
            $table->unsignedBigInteger('cuidadores_id');
             $table->foreign('cuidadores_id')->references('id')->on ('cuidadores');  
 
-           //$table->unsignedBigInteger('estados_id');
-           // $table->foreign('estados_id')->references('id')->on ('estados');  
+           $table->unsignedBigInteger('estados_id');
+            $table->foreign('estados_id')->references('id')->on ('estados');  
 
             //$table->unsignedBigInteger('medicamentos_id');
             //$table->foreign('medicamentos_id')->references('id')->on ('medicamentos'); 
