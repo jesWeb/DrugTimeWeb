@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class estados extends Model
 {
     use HasFactory;
-    protected $table = 'estados';
-    protected $primaryKey ='id_estados';
-    protected $fillable = ['nombre']; 
-
+    //protected $table = 'estados';
+    //protected $primaryKey ='id_estados';
+    //protected $fillable = ['nombre']; 
+    protected $fillable =[
+        'nombre'
+    ];
     
     
     public function  cliente() {

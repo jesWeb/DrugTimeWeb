@@ -10,8 +10,12 @@ class tratamientos extends Model
     use HasFactory;
     
     //
-   // public function  clientes() {
-        //return $this->hasMany(clientes::class);
-       // }
+   public function  clientes() {
+        return $this->hasMany(clientes::class);
+    }
+
+    public function  maquinas() {
+        return $this->hasMany(maquina::class);
+     }
 
 }

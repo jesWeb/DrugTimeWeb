@@ -14,13 +14,14 @@ class CreateMunicipiosTable extends Migration
     public function up()
     {
         Schema::create('municipios', function (Blueprint $table) {
-            $table->id('id_municipios');
+            $table->id();
             $table->string('nombre');
             $table->integer('cp');
-            $table->unsignedBigInteger('id_estados');
-            $table->timestamps();
             //llave foranea
-            //$table->foreing('id_estados')->references('id_estados')->on('estados');
+            //$table->unsignedBigInteger('id_estados');
+
+            //$table->foreing('id_estados')->references('id')->on('estados');
+            $table->timestamps();
         });
     }
 
