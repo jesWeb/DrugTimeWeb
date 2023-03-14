@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-6">
             <div class="">
-                <form action="login"  action="{{route('validar')" method="get">
+                <form action="login"  action="{{route()" method="get">
                     {{csrf_field()}}
 
                     <div class="form-floating mb-3">
